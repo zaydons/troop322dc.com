@@ -12,8 +12,7 @@ be done in a web browser on github.com.
 
    | Page on the site | File to edit |
    |---|---|
-   | Home page article ("About Us") | `_home_articles/about-us.md` |
-   | History | `history.md` |
+   | History (also the "About Us" text on the home page) | `_home_articles/history.md` |
    | Links | `links.md` |
    | Top menu | `_data/navigation.yml` |
    | Footer contact email / form link, site title, tagline | `_config.yml` |
@@ -80,7 +79,9 @@ youth-protection guidelines: get parent permission, and use first names only.
 The home page shows the files in `_home_articles`. The one with `order: 1`
 appears next to the photo, and up to three more appear in columns underneath.
 To add one, create a new file in that folder with a `title:` and an `order:`
-(2, 3 or 4). Each one also gets its own page, e.g. `/about-us/`.
+(2, 3 or 4). Each one also gets its own page, named after the file
+(`history.md` is `/history/`). To give it a different heading on the home
+page, add `home_title:` (History shows as "About Us" there).
 
 ## How deployment works
 

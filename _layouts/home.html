@@ -15,7 +15,7 @@ layout: default
 {%- if forloop.first %}
 <div id="front-first">
   <article>
-    <h1 class="entry-title">{{ article.title }}</h1>
+    <h1 class="entry-title">{{ article.home_title | default: article.title }}</h1>
     {{ article.content }}
   </article>
 </div>
@@ -23,7 +23,7 @@ layout: default
 {%- else %}
   <div class="content-third">
     <article>
-      <h1 class="entry-title">{{ article.title }}</h1>
+      <h1 class="entry-title">{{ article.home_title | default: article.title }}</h1>
       {{ article.content }}
     </article>
   </div>
@@ -36,7 +36,7 @@ layout: default
 <script>
   // Old WordPress links like /?page_id=34 still land on the right page.
   (function () {
-    var map = { "page_id=34": "history/", "page_id=37": "links/", "p=19": "about-us/", "page_id=2": "" };
+    var map = { "page_id=34": "history/", "page_id=37": "links/", "p=19": "history/", "page_id=2": "" };
     var q = location.search.replace(/^\?/, "");
     if (q && Object.prototype.hasOwnProperty.call(map, q)) {
       location.replace("{{ '/' | relative_url }}" + map[q]);
