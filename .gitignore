@@ -1,0 +1,32 @@
+# --- Never commit raw WordPress backup material ---
+# These contain database passwords, auth salts, user emails and password hashes.
+wp-config.php
+wp-config*.php
+*.sql
+*.sql.gz
+*.tgz
+*.tar
+*.tar.gz
+*.zip
+site-files/
+html/
+wp-admin/
+wp-includes/
+wp-content/
+*.pkl
+
+# --- Jekyll build output and caches ---
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.bundle/
+vendor/
+Gemfile.lock
+
+# --- OS / editor clutter ---
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
