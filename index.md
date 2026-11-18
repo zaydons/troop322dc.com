@@ -8,7 +8,6 @@ redirect_from:
   - /category/uncategorized/
   - /2022/
   - /2022/12/
-  - /author/salzaydon/
   - /feed/
   - /comments/feed/
 ---
