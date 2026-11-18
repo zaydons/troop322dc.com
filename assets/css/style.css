@@ -1,0 +1,249 @@
+/*
+  Troop 322 site styles.
+  Adapted from the "Scout Troop" WordPress theme by HandsomeWeb, LLC
+  (http://handsomeweb.com/scouts), whose author permits any Troop to use it.
+  Font: Marcellus, SIL Open Font License (see assets/fonts/OFL.txt).
+*/
+
+/* ---------- Reset ---------- */
+html,body,div,span,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,img,ol,ul,li,
+table,caption,tbody,tfoot,thead,tr,th,td,article,aside,footer,header,nav,section {
+  margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article,aside,footer,header,nav,section {display:block;}
+ol,ul {list-style:none;}
+table {border-collapse:collapse;border-spacing:0;}
+
+@font-face {
+  font-family: 'marcellusregular';
+  src: url('../fonts/marcellus-regular-webfont.woff') format('woff'),
+       url('../fonts/marcellus-regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --blue: #005A9C;
+  --red: #CE1126;
+  --text: #252525;
+}
+
+/* ---------- Page layout ---------- */
+html { overflow-y: scroll; }
+body {
+  background-color: #fff;
+  font-size: 85%;
+  line-height: 160%;
+  font-family: Helvetica, Arial, sans-serif;
+  color: var(--text);
+}
+.skip { position:absolute; left:-9999px; }
+.skip:focus { left: 10px; top: 10px; background:#fff; padding:5px; z-index:2000; }
+
+header#page-header {
+  max-width: 990px;
+  width: 97%;
+  height: 110px;
+  padding: 10px 0;
+  margin: 0 auto;
+}
+#mobile-logo { float:left; display:none; }
+#site-name {
+  font-family: marcellusregular, Marcellus, "Trajan Pro", serif;
+  font-size: 30px;
+  line-height: 100%;
+  white-space: nowrap;
+  padding-left: 3px;
+}
+#site-name a, #site-name a:visited, #site-name a:hover { text-decoration:none; color: var(--red); }
+#fleurdelis { float:left; width: 11.8181818%; }
+#brand { width: 47.27272727%; }
+#charter-box {
+  width: 33%;
+  float: right;
+  text-align: right;
+  color: var(--blue);
+  padding-right: 5px;
+}
+
+#wrapper {
+  max-width: 990px;
+  width: 97%;
+  padding: 15px 0 10px;
+  margin: 0 auto;
+  background: #fff;
+}
+.content-third { width:32.323%; margin-left:1.515%; float:left; overflow-x:hidden; }
+.content-third:first-child { margin-left:0; }
+#page-content { width:100%; padding:15px 0; overflow-y:auto; }
+#content-wide { width:66%; margin:0 1.5%; float:left; overflow-x:hidden; }
+.clear-both { clear:both; }
+
+/* ---------- Footer ---------- */
+footer {
+  padding: 10px 1.75%;
+  margin-top: 15px;
+  background-color: var(--blue);
+  color: #efefef;
+  clear: both;
+  font-size: 85%;
+  overflow-x: hidden;
+}
+div.footer-third { margin:5px 0 0; float:left; width:33%; }
+footer h3 { font-size:130%; margin-bottom:5px; }
+footer p { margin:0; line-height:130%; }
+footer ul li { list-style-type:none; line-height:150%; }
+#credit-left {
+  padding-top: 3px;
+  text-align: left;
+  color: #aaa;
+  font-size: 80%;
+}
+#footer-prepared { float:right; max-width:100%; }
+
+/* ---------- Home page ---------- */
+#front-pic { width:66.161%; float:left; clear:left; }
+#front-image { max-width:100%; height:auto; }
+#front-image-bottom { max-width:100%; display:none; height:auto; }
+#front-first { width:32.323%; float:right; }
+#front-first img { max-width:100%; height:auto; }
+#front-bottom { width:100%; clear:both; padding-top:15px; overflow-y:auto; }
+
+/* ---------- Typography ---------- */
+h1, h2 {
+  font-family: marcellusregular, Marcellus, "Trajan Pro", serif;
+  font-size: 190%;
+  line-height: 130%;
+  margin: 0 0 10px;
+  color: var(--blue);
+  clear: both;
+}
+h1 + h2 { font-size:180%; }
+h3, h4 {
+  font-family: marcellusregular, Marcellus, "Trajan Pro", serif;
+  line-height: 130%;
+  margin: 0 0 10px;
+  color: var(--blue);
+}
+h3 { font-size:170%; }
+h4 { font-size:150%; }
+h5, h6 {
+  font-family: marcellusregular, Marcellus, "Trajan Pro", serif;
+  line-height: 130%;
+  margin: 0 0 7px;
+  color: var(--red);
+}
+h5 { font-size:130%; }
+h6 { font-size:110%; }
+footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 { color:#fff; }
+
+p { margin-top:5px; margin-bottom:15px; }
+strong, b { font-weight:bold; }
+em, i, cite { font-style:italic; }
+img { max-width:100%; height:auto; }
+
+table { margin:10px 0 17px; }
+table, td, th { border:1px solid var(--blue); }
+th { color:#fff; background-color: var(--blue); }
+td, th { padding:5px; }
+
+blockquote {
+  background-color: #F1EADA;
+  color: var(--blue);
+  margin: 15px 35px 17px;
+  border-left: 4px solid var(--red);
+  padding: 10px;
+  font-size: 150%;
+  line-height: 120%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+}
+#wrapper ol { margin-left:30px; line-height:130%; margin-bottom:10px; list-style-type:decimal; }
+#wrapper ul { margin-left:30px; line-height:130%; margin-bottom:10px; list-style-type:square; }
+#wrapper li ul { list-style-type:circle; }
+#wrapper footer ul { margin-left:0; }
+hr { height:1px; background-color: var(--blue); margin:15px 0; border:0; }
+
+/* ---------- Links ---------- */
+#wrapper a, #wrapper a:visited { color: var(--blue); text-decoration: underline; }
+#wrapper a:hover, #wrapper a:active { color: var(--red); }
+#wrapper footer a, #wrapper footer a:visited { color:#fff; text-decoration:none; }
+#wrapper footer a:hover { text-decoration:underline; }
+#wrapper #credit-left a, #wrapper #credit-left a:visited { color:#aaa; text-decoration:none; }
+#wrapper #credit-left a:hover { text-decoration:underline; }
+
+/* ---------- Navigation bar ---------- */
+#main-navigation { width:100%; background-color: var(--blue); }
+.menu-button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  padding: 1em;
+  background: #003F87;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.flexnav { overflow:hidden; margin:0 auto; width:100%; max-height:0; }
+.flexnav.flexnav-show { max-height:2000px; transition: all .3s ease-in-out; }
+.flexnav li { position:relative; overflow:hidden; }
+.flexnav li a {
+  display: block;
+  padding: .75em;
+  color: #fff;
+  background: var(--blue);
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+  text-decoration: none;
+}
+.flexnav li a:hover, .flexnav li a:focus { background: var(--red); }
+
+@media all and (min-width: 767px) {
+  #main-navigation { height:40px; }
+  #main-navigation nav { font-size:90%; max-width:990px; width:97%; margin:0 auto; }
+  .menu-button { display:none; }
+  .flexnav { overflow:visible; max-height:none; }
+  .flexnav li { float:left; overflow:visible; text-align:center; white-space:nowrap; width:16.75%; }
+  .flexnav li a { border-left:1px solid #0065AD; border-bottom:none; padding:.75em 0 .77em; }
+  .flexnav > li:last-child > a { border-right:1px solid #0065AD; }
+}
+
+/* ---------- Tablet ---------- */
+@media screen and (max-width: 900px) {
+  header#page-header { height:95px; }
+  #fleurdelis { width:10%; }
+  #brand { width:40%; }
+  #charter-box { font-size:90%; width:45%; }
+  #wrapper { width:100%; }
+  #front-pic, .content-third:first-child { width:47.375%; float:left; margin:0 1.75%; }
+  #front-first, .content-third:nth-child(2) { width:47.375%; float:left; margin:0 1.75% 0 0; }
+  .content-third:last-child { width:96.5%; float:none; clear:both; }
+  #front-image-bottom { display:block; }
+}
+
+/* ---------- Phone ---------- */
+@media only screen and (max-width: 767px) {
+  #fleurdelis, #brand, #charter-box, #front-image-bottom { display:none; }
+  #mobile-logo { display:block; float:left; }
+  header#page-header { height:55px; }
+  #site-name { display:block; font-size:20px; line-height:50px; }
+  #site-name a, #site-name a:visited, #site-name a:hover { color: var(--blue); }
+  #wrapper { padding:0 0 10px; font-size:130%; }
+  #front-pic { width:100%; margin:0; float:none; }
+  #front-image { min-width:100%; margin-bottom:10px; }
+  #content-wide, #front-first, .content-third,
+  .content-third:first-child, .content-third:nth-child(2), .content-third:last-child {
+    width:90%; float:none; clear:both; margin:0 auto;
+  }
+  #content-wide, #front-first, .content-third {
+    border-bottom:1px dotted var(--blue); padding-bottom:4px; margin-bottom:15px;
+  }
+  #front-bottom { padding:0; }
+  h1, h2 { font-size:140%; }
+  h3 { font-size:130%; }
+  footer { font-size:70%; text-align:center; padding:10px 0; }
+  div.footer-third { float:none; width:98%; margin:10px 1%; }
+  #footer-prepared { float:none; margin:0 auto 10px; width:80%; }
+  #credit-left { text-align:center; font-size:75%; padding:10px 1%; }
+}

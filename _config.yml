@@ -1,0 +1,45 @@
+# ------------------------------------------------------------------
+# Site settings for troop322dc.com
+# After changing this file, the site rebuilds automatically on GitHub.
+# ------------------------------------------------------------------
+
+title: "Troop 322 | Dickson City, PA"
+tagline: "Chartered by the Dickson City Fire Department"
+description: "Scouts BSA Troop 322 of Dickson City, Pennsylvania, chartered since 1971."
+url: "https://troop322dc.com"
+lang: en-US
+
+# Contact details shown in the footer of every page.
+# Fill in one or both. Leave a value as "" to hide it.
+contact:
+  email: ""      # e.g. "scoutmaster@troop322dc.com"
+  form_url: ""   # e.g. a Google Forms link
+
+# Like WordPress: a single line break in a page becomes a line break on the site.
+kramdown:
+  hard_wrap: true
+
+# Pages and posts keep their old WordPress addresses (/history/, /links/ ...)
+permalink: pretty
+
+# Articles shown on the home page under the photo (folder: _home_articles)
+collections:
+  home_articles:
+    output: true
+    permalink: /:name/
+
+defaults:
+  - scope: { path: "" }
+    values: { layout: page }
+  - scope: { path: "", type: home_articles }
+    values: { layout: page }
+
+plugins:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

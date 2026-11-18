@@ -1,0 +1,17 @@
+<a class="skip" href="#wrapper">Skip to content</a>
+<header id="page-header">
+  <div id="charter-box">{{ site.tagline }}</div>
+  <a href="{{ '/' | relative_url }}" title="{{ site.title }}" rel="home"><img id="mobile-logo" src="{{ '/assets/images/Universal_Emblem_tiny.gif' | relative_url }}" alt="B.S.A. Fleur De Lis"><img id="fleurdelis" src="{{ '/assets/images/Universal_Emblem_bar.png' | relative_url }}" alt="B.S.A. Fleur De Lis"><img id="brand" src="{{ '/assets/images/bsa_brand.png' | relative_url }}" alt="Boy Scouts of America (R)"></a>
+  <span id="site-name"><a href="{{ '/' | relative_url }}" rel="home">{{ site.title }}</a></span>
+</header>
+<div id="main-navigation">
+  <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+  <nav>
+    <ul id="menu" class="flexnav">
+      {%- for item in site.data.navigation %}
+      {%- assign target = item.url | relative_url %}
+      <li><a href="{% if item.url contains '://' %}{{ item.url }}{% else %}{{ target }}{% endif %}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+      {%- endfor %}
+    </ul>
+  </nav>
+</div>

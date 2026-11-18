@@ -1,0 +1,26 @@
+  <footer>
+    <div class="footer-third">
+      <h3>Contact Us</h3>
+      {%- if site.contact.email != "" or site.contact.form_url != "" %}
+      <ul>
+        {%- if site.contact.email != "" %}
+        <li><a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></li>
+        {%- endif %}
+        {%- if site.contact.form_url != "" %}
+        <li><a href="{{ site.contact.form_url }}">Send us a message</a></li>
+        {%- endif %}
+      </ul>
+      {%- else %}
+      <p>Contact information coming soon.</p>
+      {%- endif %}
+    </div>
+    <div class="footer-third">&nbsp;</div>
+    <div class="footer-third">
+      <img id="footer-prepared" src="{{ '/assets/images/prepared_standard_rev.gif' | relative_url }}" alt="Prepared. For Life.">
+    </div>
+    <div class="clear-both"></div>
+  </footer>
+  <div id="credit-left">
+    &copy; {{ site.time | date: "%Y" }} {{ site.title }} - <a href="https://www.scouting.org/">Boy Scouts of America</a>
+  </div>
+  <div class="clear-both"></div>
