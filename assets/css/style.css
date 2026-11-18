@@ -15,8 +15,7 @@ table {border-collapse:collapse;border-spacing:0;}
 
 @font-face {
   font-family: 'marcellusregular';
-  src: url('../fonts/marcellus-regular-webfont.woff') format('woff'),
-       url('../fonts/marcellus-regular-webfont.ttf') format('truetype');
+  src: url('../fonts/marcellus-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
