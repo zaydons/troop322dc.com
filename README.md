@@ -91,6 +91,26 @@ https://troop322dc.com within a minute or two.
 To try out a bigger change before it goes live, create a branch, make your
 edits there, and open a pull request. Only merging into `main` publishes it.
 
+## Domain & DNS
+
+- **Domain registration:** Porkbun. DNS is also managed at Porkbun (Porkbun's default nameservers).
+- **Custom domain on GitHub:** repo **Settings → Pages**. It's set to `troop322dc.com`
+  with **Enforce HTTPS** on. The `CNAME` file in this repo holds the domain; don't delete it.
+- **DNS records at Porkbun:**
+
+  | Purpose | Type | Host | Value |
+  |---|---|---|---|
+  | Website (GitHub Pages) | A | `@` | `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153` |
+  | Website (GitHub Pages) | AAAA | `@` | `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153` |
+  | Website (www) | CNAME | `www` | `zaydons.github.io` |
+  | Email (MXroute) | MX | `@` | `echo.mxrouting.net` (10), `echo-relay.mxrouting.net` (20) |
+  | Email (MXroute) | CNAME | `mail` | `echo.mxrouting.net` |
+  | Email (MXroute) | TXT | `@` | `v=spf1 include:mxlogin.com -all` (SPF) |
+  | Email (MXroute) | TXT | `x._domainkey` | DKIM key from the MXroute panel |
+  | GitHub domain verification | TXT | `_github-pages-challenge-zaydons` | value from github.com/settings/pages |
+
+  **Deleting any of the email records will break troop email.**
+
 ## Previewing on your own computer (optional)
 
 This needs [Docker Desktop](https://www.docker.com/products/docker-desktop/).
