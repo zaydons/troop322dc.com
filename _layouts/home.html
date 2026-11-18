@@ -33,13 +33,3 @@ layout: default
 {%- endif %}
 {%- endfor %}
 {{ content }}
-<script>
-  // Old WordPress links like /?page_id=34 still land on the right page.
-  (function () {
-    var map = { "page_id=34": "history/", "page_id=37": "links/", "p=19": "history/", "page_id=2": "" };
-    var q = location.search.replace(/^\?/, "");
-    if (q && Object.prototype.hasOwnProperty.call(map, q)) {
-      location.replace("{{ '/' | relative_url }}" + map[q]);
-    }
-  })();
-</script>

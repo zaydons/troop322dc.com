@@ -125,11 +125,11 @@ Then open http://localhost:4000.
 
 ## Never commit
 
-Raw WordPress backups (`wp-config.php`, `.sql` dumps, `.tgz`/`.zip` archives)
+Website backups (config files, `.sql` database dumps, `.tgz`/`.zip` archives)
 contain passwords and personal data. `.gitignore` blocks them, but don't copy
 them into this folder.
 
 ## Credits
 
-Design adapted from the "Scout Troop" WordPress theme by HandsomeWeb, LLC.
+Design adapted from the "Scout Troop" theme by HandsomeWeb, LLC.
 Marcellus font under the SIL Open Font License (`assets/fonts/OFL.txt`).

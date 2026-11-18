@@ -15,11 +15,11 @@ contact:
   email: ""      # e.g. "scoutmaster@troop322dc.com"
   form_url: ""   # e.g. a Google Forms link
 
-# Like WordPress: a single line break in a page becomes a line break on the site.
+# A single line break in a page becomes a line break on the site.
 kramdown:
   hard_wrap: true
 
-# Pages and posts keep their old WordPress addresses (/history/, /links/ ...)
+# Page addresses end in a slash: links.md becomes /links/
 permalink: pretty
 
 # Articles shown on the home page under the photo (folder: _home_articles)
@@ -35,7 +35,6 @@ defaults:
     values: { layout: page }
 
 plugins:
-  - jekyll-redirect-from
   - jekyll-sitemap
 
 exclude:
