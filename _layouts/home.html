@@ -1,0 +1,45 @@
+---
+layout: default
+---
+{%- comment -%}
+  Home page: photo on the left, the first home article on the right,
+  and up to three more home articles in columns underneath.
+  The articles live in the _home_articles folder, sorted by "order".
+{%- endcomment -%}
+{%- assign articles = site.home_articles | sort: "order" -%}
+<div id="front-pic">
+  <img id="front-image" src="{{ page.image | default: '/assets/images/front-pic.jpg' | relative_url }}" alt="{{ page.image_alt | default: 'Boy Scouts of America' }}">
+  <img id="front-image-bottom" src="{{ '/assets/images/Prepared_for_life.gif' | relative_url }}" alt="Prepared for Life">
+</div>
+{%- for article in articles limit: 4 %}
+{%- if forloop.first %}
+<div id="front-first">
+  <article>
+    <h1 class="entry-title">{{ article.title }}</h1>
+    {{ article.content }}
+  </article>
+</div>
+<div id="front-bottom">
+{%- else %}
+  <div class="content-third">
+    <article>
+      <h1 class="entry-title">{{ article.title }}</h1>
+      {{ article.content }}
+    </article>
+  </div>
+{%- endif %}
+{%- if forloop.last %}
+</div>
+{%- endif %}
+{%- endfor %}
+{{ content }}
+<script>
+  // Old WordPress links like /?page_id=34 still land on the right page.
+  (function () {
+    var map = { "page_id=34": "history/", "page_id=37": "links/", "p=19": "about-us/", "page_id=2": "" };
+    var q = location.search.replace(/^\?/, "");
+    if (q && Object.prototype.hasOwnProperty.call(map, q)) {
+      location.replace("{{ '/' | relative_url }}" + map[q]);
+    }
+  })();
+</script>

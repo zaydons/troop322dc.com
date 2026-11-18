@@ -1,0 +1,8 @@
+# The menu bar at the top of every page, in order.
+# To add a page to the menu, add two lines like the ones below.
+- title: Home
+  url: /
+- title: History
+  url: /history/
+- title: Links
+  url: /links/
