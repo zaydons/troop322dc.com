@@ -1,4 +1,4 @@
-# --- Never commit raw WordPress backup material ---
+# --- Never commit website backups or database dumps ---
 # These contain database passwords, auth salts, user emails and password hashes.
 wp-config.php
 wp-config*.php
