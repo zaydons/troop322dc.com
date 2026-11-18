@@ -1,5 +1,12 @@
 ---
 title: History
+# Heading used for this text on the home page
+home_title: About Us
+order: 1
+# Old addresses that now show this page
+redirect_from:
+  - /about-us/
+  - /post-4/
 ---
 
 Troop 322 has been chartered since 1971. Since 2019, Troop 322 has been chartered by the Dickson City Fire Department.
