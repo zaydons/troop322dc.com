@@ -12,7 +12,7 @@ lang: en-US
 # Contact details shown in the footer of every page.
 # Fill in one or both. Leave a value as "" to hide it.
 contact:
-  email: ""      # e.g. "scoutmaster@troop322dc.com"
+  email: "scoutmaster@troop322dc.com"
   form_url: ""   # e.g. a Google Forms link
 
 # A single line break in a page becomes a line break on the site.
